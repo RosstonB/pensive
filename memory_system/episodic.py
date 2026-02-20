@@ -115,7 +115,7 @@ class EpisodicMemory:
             pipeline = [
                 {
                     "$vectorSearch": {
-                        "index": "vector_index",
+                        "index": "v_idx_episodic_memories",
                         "path": "embedding",
                         "queryVector": query_embedding,
                         "numCandidates": limit or self.vector_limit * 5,
